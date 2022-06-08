@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: beige;
+            background-size: cover;
+            justify-content: center;
+            width: 100%;
+        }
+        .section{
+            display: inline;
+            align-items: center;
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+        .section .container{
+            position: relative;
+            box-sizing: border-box;
+            border: 2px solid yellow;
+            /*margin: 40px;*/
+            background:white;
+            width: 300px;
+            margin: 20px;
+        }
+        .section .container p{
+            margin: 10px 10px;
+            color:rgb(7, 32, 78);
+        }
+        .section .container .box{
+            position: relative;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .section .container .box .btn{
+            background-color: red;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .section .container .box .btn:hover{
+            background-color: sandybrown;
+            transition: background-color 2s;    
+        }
+        #more{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+                <p>
+                    NH8. In the 90s the growing tourism industry caused a lot of movement on the NH8 highway, 
+                    which made him realize that there is a lack of good quality of food for people traveling from <span id="dots">.....</span>
+                <span id="more">
+                    Delhi to Jaipur. With a team of four people, he started a small eatery serving authentic & fresh
+                    north-Indian food. He never in his wild imagination thought that this small Dhaba will become such 
+                    a huge hit among travelers. The Unique taste and quantity of the food attracted everyone traveling on NH8. 
+                    Today Old Rao Hotel serves the largest number of people on NH8 and is the undisputed leader
+                </span>
+                </p>
+                <div class="box">
+                    <button class="btn" id="mybtn" onclick="myFunction()">Read More</dbutton>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <p>
+                NH8. In the 90s the growing tourism industry caused a lot of movement on the NH8 highway, 
+                which made him realize that there is a lack of good quality of food for people traveling from <span id="dots">.....</span>
+            <span id="more">
+                Delhi to Jaipur. With a team of four people, he started a small eatery serving authentic & fresh
+                north-Indian food. He never in his wild imagination thought that this small Dhaba will become such 
+                a huge hit among travelers. The Unique taste and quantity of the food attracted everyone traveling on NH8. 
+                Today Old Rao Hotel serves the largest number of people on NH8 and is the undisputed leader
+            </span>
+            </p>
+            <div class="box">
+                <button class="btn" id="mybtn" onclick="myFunction()">Read More</dbutton>
+            </div>
+        </div>
+    </div>
+    </section>
+    <script>
+        function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("mybtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+       
+
+    </script>
+</body>
+</html>
